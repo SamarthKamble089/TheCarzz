@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The carzz | Sovereign BMW Collection</title>
+  <meta name="description"
+    content="The carzz is the premier global purveyor of iconic BMW M models, grand tourers, and bespoke Bavarian luxury vehicles. Experience sheer driving pleasure.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Ambient Background Lighting -->
+  <div class="ambient-glow glow-top"></div>
+  <div class="ambient-glow glow-mid"></div>
+  <div class="ambient-glow glow-bottom"></div>
+  <div class="canvas-grid-overlay"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="main-nav">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" id="brand-logo-link">
+        <span class="logo-badge"></span>
+        <span class="logo-text">The <span class="logo-accent">carzz</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#hero" class="nav-link active">Homee</a>
+        <a href="#fleet" class="nav-link">BMW Fleet</a>
+        <a href="#experience" class="nav-link">Bespoke Concierge</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="sound-toggle-btn" class="icon-btn" title="Toggle BMW M Sound Engine" aria-label="Toggle Audio">
+          <svg class="audio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path class="sound-wave" d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <span class="sound-status-text">Audio: Off</span>
+        </button>
+
+        <a href="#fleet" class="btn btn-primary nav-cta">Explore BMW Fleet</a>
+      </div>
+    </div>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+  </header>
+
+  <!-- Hero Section: Company Intro & Bio -->
+  <section class="hero-section" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>EXCLUSIVE BMW SOVEREIGN ATELIER</span>
+      </div>
+
+      <h1 class="hero-title">
+        The <span class="gold-gradient-text">carzz</span>
+      </h1>
+
+      <p class="hero-tagline">
+        The Ultimate Driving Machine • Curated in Motion
+      </p>
+
+      <!-- Company Bio as requested -->
+      <div class="hero-bio-card">
+        <p class="hero-bio">
+          Founded on an uncompromising obsession with sheer driving pleasure and Bavarian engineering mastery,
+          <strong>The carzz</strong> represents the world's most distinguished private BMW automotive showroom.
+          We specialize in the acquisition, curation, and bespoke commissioning of world-class BMW M powerhouses,
+          rare homologation champions like the 3.0 CSL, and next-generation electrified i-series flagships.
+          Each BMW in our private vault is hand-vetted through a rigorous 300-point forensic certification,
+          ensuring you command not just an automobile, but an indelible Bavarian legacy.
+        </p>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric-item">
+          <span class="metric-number" data-target="14">14</span>
+          <span class="metric-label">Iconic BMW Models</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <span class="metric-number" data-target="980">980+</span>
+          <span class="metric-label">Client Deliveries</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <span class="metric-number">100%</span>
+          <span class="metric-label">BMW Provenance</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <span class="metric-number">24/7</span>
+          <span class="metric-label">Global Private Concierge</span>
+        </div>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#fleet" class="btn btn-primary btn-large" id="hero-explore-btn">
+          <span>Enter BMW Showroom</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#experience" class="btn btn-secondary btn-large">
+          <span>Bavarian Heritage</span>
+        </a>
+      </div>
+
+      <!-- Animated Scroll Prompt -->
+      <div class="scroll-cue" id="scroll-cue">
+        <span class="cue-label">Scroll to see cars peek from boundaries • Click any car to center</span>
+        <div class="mouse-scroll-indicator">
+          <div class="mouse-wheel"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Fleet Showcase Section -->
+  <section class="fleet-section" id="fleet">
+    <div class="section-header">
+      <div class="section-subtitle">BAVARIAN MASTERPIECES</div>
+      <h2 class="section-title">The BMW <span class="gold-gradient-text">Runway</span></h2>
+      <p class="section-description">
+        Watch as actual side-view BMW photos glide completely into view from the sides and settle smoothly inward as you
+        navigate down.
+        Click any car to bring it into the center spotlight and inspect its full specifications, price, and provenance.
+      </p>
+
+      <!-- Category Filter Controls -->
+      <div class="filter-controls" id="filter-controls">
+        <button class="filter-btn active" data-filter="all">All BMW Models (14)</button>
+        <button class="filter-btn" data-filter="hypercar">M Flagships & Hybrids</button>
+        <button class="filter-btn" data-filter="supercar">M Coupes & Sedans</button>
+        <button class="filter-btn" data-filter="luxury">Executive & Electric</button>
+        <button class="filter-btn" data-filter="grandtourer">Roadsters & GTs</button>
+      </div>
+
+      <!-- Dynamic Visual Guide -->
+      <div class="scroll-status-indicator">
+        <span class="indicator-pulse"></span>
+        <span class="indicator-text">Horizontal Physics Active: Cars glide completely inward • Disappear at edges •
+          Click to Center</span>
+      </div>
+    </div>
+
+    <!-- The Dual Car Scroll Stage (7 Rows x 2 Cars = 14 Vehicles) -->
+    <div class="fleet-runway-container" id="fleet-container">
+      <!-- Generated dynamically by script.js with data-direction="left" and "right" -->
+    </div>
+  </section>
+
+  <!-- Bespoke Concierge Experience Section -->
+  <section class="experience-section" id="experience">
+    <div class="experience-container">
+      <div class="experience-content">
+        <div class="section-subtitle">THE CARZZ DISTINCTION</div>
+        <h2 class="section-title">Private Concierge & <span class="gold-gradient-text">White-Glove</span> Acquisition
+        </h2>
+        <p class="experience-text">
+          Acquiring a vehicle from <strong>The carzz</strong> is an intimate partnership. From enclosed carbon-shielded
+          transcontinental delivery to custom livery detailing in our Monaco and Zurich workshops, we orchestrate
+          every nuance of your ownership journey with utmost discretion.
+        </p>
+
+        <div class="service-pills">
+          <div class="service-pill">
+            <span class="pill-icon">✦</span>
+            <span>Armored Transcontinental Delivery</span>
+          </div>
+          <div class="service-pill">
+            <span class="pill-icon">✦</span>
+            <span>Closed-Circuit Track Test Days</span>
+          </div>
+          <div class="service-pill">
+            <span class="pill-icon">✦</span>
+            <span>Cryptocurrency & Escrow Settlement</span>
+          </div>
+          <div class="service-pill">
+            <span class="pill-icon">✦</span>
+            <span>Factory Build-Slot Allocations</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="experience-card">
+        <div class="card-glass-glow"></div>
+        <div class="concierge-badge">VIP SERVICES</div>
+        <h3>Schedule A Closed Showroom Tour</h3>
+        <p>Private viewings are arranged strictly by appointment at our Geneva, Dubai, and Los Angeles ateliers.</p>
+        <form class="quick-inquiry-form" id="quick-inquiry-form"
+          onsubmit="event.preventDefault(); window.handleQuickInquiry();">
+          <input type="text" placeholder="Full Name" required class="form-input">
+          <input type="email" placeholder="Private Email" required class="form-input">
+          <select class="form-input" required>
+            <option value="" disabled selected>Select Primary Interest</option>
+            <option value="hypercar">Hypercar Acquisition</option>
+            <option value="luxury">Bespoke Grand Tourer</option>
+            <option value="collection">Entire Fleet Consultation</option>
+          </select>
+          <button type="submit" class="btn btn-primary btn-block">Request Confidential Invitation</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo-badge">TC</div>
+        <span class="footer-logo-text">The <span class="logo-accent">carzz</span></span>
+        <p class="footer-tagline">
+          The sovereign atelier for the world's finest automotive creations.
+          Engineered for exhilaration, curated for immortality.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Showrooms</h4>
+        <ul>
+          <li>Geneva • Rue du Rhône</li>
+          <li>Dubai • DIFC Gate Village</li>
+          <li>Los Angeles • Rodeo Drive</li>
+          <li>Tokyo • Ginza 6</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Direct Concierge</h4>
+        <ul>
+          <li>Email: concierge@thecarzz.luxury</li>
+          <li>Private Desk: +1 (800) 843-2279</li>
+          <li>Secure Channel: PGP Key Verified</li>
+          <li>Available: 24/7/365</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Authenticity</h4>
+        <ul>
+          <li>100% Provenance Guarantee</li>
+          <li>Forensic Mechanical Audit</li>
+          <li>Title Escrow Protection</li>
+          <li>Global Carbon Neutral Logistics</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 The carzz Atelier Inc. All rights reserved. Crafted for automotive connoisseurs.</p>
+      <a href="#hero" class="back-to-top" id="back-to-top-btn" title="Back to top">
+        <span>Top</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M18 15l-6-6-6 6" />
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Car Detail Modal as requested: "as the user clicks a car its name, price company and 3-4 lines of description will show" -->
+  <div class="modal-overlay" id="car-modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-card" id="car-modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-body">
+        <!-- Left: Big Media Showcase -->
+        <div class="modal-media-wrap">
+          <img id="modal-car-img" src="" alt="Car Image" class="modal-image">
+          <div class="modal-badge-row">
+            <span class="modal-category-badge" id="modal-category-badge">Hypercar</span>
+            <span class="modal-status-badge">In Stock • Verified</span>
+          </div>
+        </div>
+
+        <!-- Right: Information Showcase -->
+        <div class="modal-info-wrap">
+          <div class="modal-header-info">
+            <!-- Company -->
+            <span class="modal-company" id="modal-company">MANUFACTURER</span>
+            <!-- Car Name -->
+            <h2 class="modal-car-name" id="modal-car-name">Car Model Name</h2>
+            <!-- Price -->
+            <div class="modal-price-box">
+              <span class="price-prefix">Acquisition Price</span>
+              <span class="modal-price" id="modal-price">$0,000,000</span>
+            </div>
+          </div>
+
+          <!-- 3 to 4 lines description as requested -->
+          <div class="modal-desc-container">
+            <h4 class="desc-heading">Vehicle Overview & Pedigree</h4>
+            <p class="modal-description" id="modal-description">
+              <!-- Populated via JavaScript -->
+            </p>
+          </div>
+
+          <!-- Specs Badges -->
+          <div class="modal-specs-grid" id="modal-specs-grid">
+            <div class="spec-pill">
+              <span class="spec-label">0-60 MPH</span>
+              <span class="spec-value" id="spec-accel">2.3s</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-label">TOP SPEED</span>
+              <span class="spec-value" id="spec-speed">220+ mph</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-label">HORSEPOWER</span>
+              <span class="spec-value" id="spec-power">1000 hp</span>
+            </div>
+            <div class="spec-pill">
+              <span class="spec-label">POWERTRAIN</span>
+              <span class="spec-value" id="spec-engine">V12 Hybrid</span>
+            </div>
+          </div>
+
+          <!-- Call to actions -->
+          <div class="modal-actions">
+            <button class="btn btn-primary modal-action-btn" id="modal-inquire-btn" onclick="window.bookTestDrive()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>Book Private Test Drive</span>
+            </button>
+            <button class="btn btn-secondary modal-action-btn" onclick="window.playEngineSound()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+              <span>Listen To Engine</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast-notification" id="toast-notification">
+    <div class="toast-icon">✓</div>
+    <div class="toast-message" id="toast-message">Message text here</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
